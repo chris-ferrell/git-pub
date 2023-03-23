@@ -24,3 +24,8 @@ const drinks = [
   { name: "APIPA", price: 43, image: "https://i.imgur.com/qAhA7pi.jpg" },
   { name: "node to joy", price: 56, image: "https://i.imgur.com/MbVdwZz.jpg" },
 ];
+
+
+module.exports = {
+    drinks: drinks
+}
