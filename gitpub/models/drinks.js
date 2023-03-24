@@ -1,19 +1,8 @@
-const drinks = [
-    {
-      name: 'cruddy mary',
-      price: 132,
-      image: 'https://i.imgur.com/Va5iIw5.jpg'
-    },
-    {
-      name: 'index on the beach',
-      price: 68,
-      image: 'https://i.imgur.com/XV2aPa2.jpg'
-    },
-    {
-      name: 'hack & coke',
-      price: 1,
-      image: 'https://i.imgur.com/rLOXFRI.jpg'
-    },
+const drinks = {
+  data: [ 
+    { name: 'cruddy mary', price: 132, image: 'https://i.imgur.com/Va5iIw5.jpg' },
+    { name: 'index on the beach', price: 68, image: 'https://i.imgur.com/XV2aPa2.jpg'},
+    { name: 'hack & coke', price: 1, image: 'https://i.imgur.com/rLOXFRI.jpg'},
     {
       name: 'whiskey-value pair',
       price: 11,
@@ -38,7 +27,13 @@ const drinks = [
       name: 'node to joy',
       price: 56,
       image: 'https://i.imgur.com/MbVdwZz.jpg'
+    } ] ,
+    getAll: function(){
+        return this.data
+    },
+    getOne: function(index){
+        return this.data[index]
     }
-  ];
+} 
 
  module.exports = drinks;
