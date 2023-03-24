@@ -12,5 +12,15 @@
   </style>
 <body>
     <h1>Welcome to gitPubb </h1>
+    <ul>
+    <% for(let i = 0; i < allDrinks.length; i++) { %>
+        <% const original = allDrinks[i].name
+           const originalCptl = original.charAt(0).toUpperCase() + original.slice(1);
+        %>
+        <li>
+            <a href="/drinks/<%=i%>"></a><%=originalCptl %></a>
+        </li>
+    <% } %>
+    </ul>
 </body>
 </html>
