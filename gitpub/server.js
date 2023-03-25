@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 const PORT = 3000;
+const cors = require('cors');
+app.use(cors());
 // const drinks = require('./models/drinks.js')
 const drinksRouter = require('./controller/drinks') // import router
 const foodRouter = require('./controller/food')
