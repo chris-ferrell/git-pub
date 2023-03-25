@@ -12,15 +12,14 @@
   </style>
 <body>
     <h1>Welcome to gitPubb </h1>
-    <% console.log(allDrinks)%>
     <ul>
-    <% for(let i = 0; i < allDrinks.length; i++) { %>
-        <% const original = allDrinks[i].name
+    
+    <% for(let i = 0; i < allFoods.length; i++) { %>
+        <% const original = allFoods[i].name
            const originalCptl = original.charAt(0).toUpperCase() + original.slice(1);
         %>
         <li>
-            <a href="/drinks/<%=i%>"><%=originalCptl %></a>
-            <img src="<%= allDrinks[i].image%>">
+            <a href="/food/<%=i%>"><%=originalCptl %></a>
         </li>
     <% } %>
     </ul>

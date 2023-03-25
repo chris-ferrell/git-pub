@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All items</title>
+</head>
+<style type="text/css">
+    body {
+      color: blanchedalmond;
+      background-color: steelblue;
+    }
+  </style>
+<body>
+    
+    <ul>
+        <% for(let i = 0; i < allDrinks.length; i++) { %>
+            <% const original = allDrinks[i].name
+               const originalCptl = original.charAt(0).toUpperCase() + original.slice(1);
+            %>
+            <li>
+                <a href="/drinks/<%=i%>"><%=originalCptl %></a>
+                <img src="<%= allDrinks[i].image%>">
+            </li>
+        <% } %>
+
+        <% for(let i = 0; i < allFoods.length; i++) { %>
+            <% const original = allFoods[i].name
+               const originalCptl = original.charAt(0).toUpperCase() + original.slice(1);
+            %>
+            <li>
+                <a href="/food/<%=i%>"><%=originalCptl %></a>
+                <img src="<%= allFoods[i].image%>">
+            </li>
+        <% } %>
+
+    </ul>
+
+</body>
+</html>
