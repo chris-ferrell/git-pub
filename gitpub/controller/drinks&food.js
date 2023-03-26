@@ -13,7 +13,8 @@ router.get('/', (req,res) => {
     res.render(
         'drinkfood.ejs', {
             allDrinks:drinks,
-            allFoods:food
+            allFoods:food,
+            oneFood:food
         })
 })
 module.exports = router;

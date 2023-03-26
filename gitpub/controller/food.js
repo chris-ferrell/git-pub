@@ -8,21 +8,26 @@ const router = express.Router();
 
 
 // register routes 
-router.get('/', (req,res) => {
-    res.render('food_index', {
-        allFoods:food
-    })
+router.get('/:id?', (req,res) => {
+    console.log(req.params.id)
+    if (req.params.id === undefined){
+        res.render(
+            'food_index.ejs', {
+                allFoods:food,
+                oneFood:food
+            });
+    } else {
+        const index = req.params.id;
+    
+        res.render( 
+        'food_show.ejs',
+            {
+            oneFood:food,
+            foodIndex:index
+            }
+    )
+    }
 })
-
-
-
-router.get('/:id', (req,res) => {
-    // console.log(req.params.id)
-    const index = req.params.id;
-    res.render('food_show.ejs', {
-        oneFood:food[index]
-    })
-    }) 
 module.exports = router;
 
 
